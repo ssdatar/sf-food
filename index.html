@@ -23,18 +23,20 @@
     </head>
 
     <body>
-        <div class="page-header">
-            <h1 id="title">Hungry SF</h1>
-            <h4 id="descriptor"> Starving? Can't wait? Enter an address or landmark in San Francisco and see the nearest open food trucks/carts!</h4>
+        <div class="container-fluid">
+            <div class="page-header">
+                <h1 id="title">Hungry SF</h1>
+                <h4 id="descriptor"> Starving? Can't wait? Enter an address or landmark in San Francisco and see the nearest open food trucks/carts!</h4>
 
-            <form id="user-location">
-                <input type="text" id="location-input" placeholder="Enter a location in San Francisco"/>
-                <input type="submit" value="Show me" id="button">
-            </form>
-            <div class="error-message">
-                <p class="message" id="user-error">Sorry, this address is either not in San Francisco or you can be more specific</p>
+                <form id="user-location">
+                    <input type="text" id="location-input" placeholder="Enter a location in San Francisco"/>
+                    <input type="submit" value="Show me" id="button">
+                </form>
+                <div class="error-message">
+                    <p class="message" id="user-error">Sorry, this address is either not in San Francisco or you can be more specific</p>
+                </div>
+                <small class="text-center">Data source: <a href="https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b">SF Data Portal</a></small>
             </div>
-            <small class="text-center">Data source: <a href="https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b">SF Data Portal</a></small>
         </div>
         <div id="map"></div>
 

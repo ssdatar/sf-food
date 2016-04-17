@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Lato', helvetica, sans-serif;
+    background-color: #ffe;
 }
 
 #title {
@@ -15,9 +16,7 @@ body {
 }
 
 .page-header {
-    /*max-width: 70%;*/
     text-align: center;
-    /*position: fixed;*/
 }
 
 #descriptor {
@@ -44,7 +43,6 @@ small {
 
 #user-location {
     text-align: center;
-    margin: 2em;
 }
 
 .error-message, h4, #source {
@@ -58,6 +56,7 @@ small {
 
 .leaflet-popup-content {
     font-family: 'Lato', helvetica, sans-serif;
+    font-size: 1.3em;
 }
 
 .menu {
@@ -82,15 +81,16 @@ small {
   }
 
   #location-input {
-        width: 15vw;
-        height: 9vw;
+        width: 60vw;
+        height: 9vh;
         margin-bottom: 1.2em;
-        margin-right: 1em;
+        font-size: 1.5em;
     }
 
     #button {
-        width: 20vw;
+        width: 60vw;
         height: 10vh;
+        font-size: 1.5em;
     }
 }
 
@@ -109,15 +109,14 @@ small {
     }
 
     #location-input {
-        width: 15vw;
-        height: 15vw;
-        margin-bottom: 1.2em;
-        margin-right: 1em;
+        width: 20vw;
+        height: 15vh;
+        font-size: 1.5em;
     }
 
     #button {
         width: 60vw;
         height: 10vh;
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
