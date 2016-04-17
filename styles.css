@@ -5,90 +5,110 @@
 }
 
 body {
-	font-family: 'Lato', helvetica, sans-serif;
+    font-family: 'Lato', helvetica, sans-serif;
 }
 
 #title {
-	text-align: center;
-	color: darkred;
+    text-align: center;
+    color: darkred;
+    font-size: 4em;
+}
+
+.page-header {
+    /*max-width: 70%;*/
+    text-align: center;
 }
 
 #descriptor {
-	margin-bottom: 1em;
+    margin: 1.3em;
+    font-size: 2em; 
 }
 
 input {
-	display: inline-block;
-	padding: .6em;
-	text-align: center;
-	font-size: 100%;
+    display: inline-block;
+    padding: .6em;
+    text-align: center;
+    font-size: 100%;
+}
+
+small {
+    display: block;
 }
 
 #map {
-	height: 100%;
-	width: 100%;
-	position: absolute;
+    height: 70%;
+    width: 100%;
+    position: absolute;
 }
 
 #user-location {
-	text-align: center;
+    text-align: center;
+    margin: 2em;
 }
 
 .error-message, h4, #source {
-	text-align: center;
+    text-align: center;
 }
 
 #location-input {
-	width: 30vw;
-	min-width: 350px;
+    width: 30vw;
+    min-width: 350px;
 }
 
 @media only screen and (max-width: 768px) {
   #map{
-  	height: 400px; 
-  	width: 100%; 
-  	display: block;
+    margin-top: 3em;
+    height: 50%; 
+    width: 100%;
   }
-	
+    
   #title {
-  	font-size: 4em;
-  	margin: 0 1em 0.5em 1em;
+    font-size: 6em;
+    margin: 0 1em 0.5em 1em;
   }
 
   #descriptor {
-  	font-size: 2em;
-  	margin: 0 1em 0.5em 1em;
+    font-size: 3em;
+    margin: 0 1em 0.5em 1em;
   }
 
-
   #location-input {
-		width: 15vw;
-		height: 9vw;
-		margin-bottom: 1.2em;
-		margin-right: 1em;
-	}
+        width: 15vw;
+        height: 9vw;
+        margin-bottom: 1.2em;
+        margin-right: 1em;
+    }
 
-	#button {
-		width: 20vw;
-		height: 10vh;
-	}
+    #button {
+        width: 20vw;
+        height: 10vh;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-	#map {
-	  	height: 300px;
-	  }
+    #map {
+        height: 50%;
+      }
+    #title {
+        font-size: 4.1em;
+        margin: 0 1em 0.5em 1em;
+    }
 
-	#location-input {
-		width: 15vw;
-		height: 15vw;
-		margin-bottom: 1.2em;
-		margin-right: 1em;
-	}
+    #descriptor {
+        font-size: 2.4em;
+        margin: 0 1em 0.5em 1em;
+    }
 
-	#button {
-		width: 60vw;
-		height: 10vh;
-		font-size: 1em;
-	}
+    #location-input {
+        width: 15vw;
+        height: 15vw;
+        margin-bottom: 1.2em;
+        margin-right: 1em;
+    }
+
+    #button {
+        width: 60vw;
+        height: 10vh;
+        font-size: 1em;
+    }
 }
