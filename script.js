@@ -52,8 +52,9 @@ $(document).ready(function() {
 
                 drawMap(userLat, userLong, foodGeoJson);
 
-                $('html, body').animate({
-                    scrollTop: $('#map').offset().top }, 2000);
+                //Scroll to map
+                // $('html, body').animate({
+                //     scrollTop: $('#map').offset().top }, 2000);
             }
         });
     });
@@ -102,9 +103,9 @@ function drawMap(userLat, userLong, points) {
             var tooltip = feature.properties.location;
             var timings = '<p>Closes at: ' + feature.properties.ends + '</p>';
 
-            layer.bindPopup(feature.properties.desc);
+            //layer.bindPopup(feature.properties.desc);
 
-            layer.bindPopup('<p>Location: '+ tooltip + '</p>' + '\n' + timings);
+            layer.bindPopup('<p>Location: '+ tooltip + '</p>' + '\n' + timings + '<p class="menu">' + feature.properties.desc + '</p>');
       }
     });
     map.addLayer(dataLayer);
@@ -154,13 +155,15 @@ function pointsToPlot (userLat, userLong) {
 function isOpen(cart) {
     //console.log(cart);
     var hoursNow = new Date().getHours();
-    hoursNow = hoursNow.toString() + ':00';
+    var startTime = cart.starts.split(':')[0],
+        endTime = cart.ends.split(':')[0];
+
     var dayNow = new Date().getDay();
     cart.Day = parseInt(cart.Day);
 
     if (dayNow !== cart.Day) {
         return false;
-    } else if (hoursNow >= cart.starts && hoursNow < cart.ends) {
+    } else if (hoursNow >= startTime && hoursNow < endTime) {
         return true;
     } else {
         return false;
