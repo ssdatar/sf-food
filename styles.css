@@ -22,6 +22,7 @@ body {
 #descriptor {
     margin: 1.3em;
     font-size: 2em; 
+    color: #525252;
 }
 
 input {
@@ -33,6 +34,7 @@ input {
 
 small {
     display: block;
+    color: #7f7f7f;
 }
 
 #map {
