@@ -17,12 +17,6 @@ body {
 	margin-bottom: 1em;
 }
 
-.text {
-	padding: 3em;
-	max-width: 970px;
-	margin: 0 auto;
-}
-
 input {
 	display: inline-block;
 	padding: .6em;
@@ -55,6 +49,18 @@ input {
   	width: 100%; 
   	display: block;
   }
+	
+  #title {
+  	font-size: 4em;
+  	margin: 0 1em 0.5em 1em;
+  }
+
+  #descriptor {
+  	font-size: 2em;
+  	margin: 0 1em 0.5em 1em;
+  }
+
+
   #location-input {
 		width: 15vw;
 		height: 9vw;
