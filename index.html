@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Hungry in SF</title>
+        <meta charset="utf-8">   	
+        <!--Leaflet styles and script-->
+    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <!--Bootstrap stylesheet-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+        <!--Main stylesheet-->
+        <link rel="stylesheet" href="styles.css" />
+
+         <!--Google font Lato-->
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    	
+		<!--jQuery and Google Street View API scripts-->
+    	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    	<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRUl9VBYskltbiLUIKdyHB8n9n5m9Jzcg"></script--> 
+
+        <!-- <script src="https://d3js.org/d3.v3.min.js"></script>  	 -->
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h1 id="title">Hungry SF</h1>
+            <h4> Starving? Can't wait for a table? Enter an address or landmark in San Francisco and see the nearest food trucks/carts!</h4>
+
+            <form id="user-location">
+                <input type="text" id="location-input" placeholder="Enter a location in San Francisco"/>
+                <input type="submit" value="Show me" id="button">
+            </form>
+            <div class="error-message">
+                <p class="message" id="user-error">Sorry, this address is either not in San Francisco or you can be more specific</p>
+            </div>
+        </div>
+        <div id="map"></div>
+
+        <script src="data.js"></script>
+    	<script src="script.js"></script>
+    </body>
+</html>
