@@ -117,7 +117,7 @@ function drawMap(userLat, userLong, points) {
 
             //layer.bindPopup(feature.properties.desc);
 
-            layer.bindPopup('<p>Location: '+ tooltip + '</p>' + '\n' + timings + '<p class="menu">' + feature.properties.desc + '</p>');
+            layer.bindPopup('<p>Location: '+ tooltip + '</p>' + '\n' + timings + '<p class="menu"> <mark>' + feature.properties.desc + '</mark></p>');
       }
     });
     map.addLayer(dataLayer);
