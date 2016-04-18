@@ -51,6 +51,8 @@ small {
     text-align: center;
 }
 
+#default { font-size: 1.3em; }
+
 #location-input {
     width: 30vw;
     min-width: 350px;

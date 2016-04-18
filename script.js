@@ -16,6 +16,7 @@ $(document).ready(function() {
     //Don't show container until user has fed in values
     // $('#map').hide();
     $('#user-error').hide();
+    $('#default').hide();
     
     $('form').submit(function (e) {
         var userInput = $('#location-input').val();
@@ -37,7 +38,13 @@ $(document).ready(function() {
 
                 foodPts = pointsToPlot(37.774833, -122.418284);
                 foodGeoJson = toGeoJSON(foodPts);
-                drawMap(37.774833, -122.418284, foodGeoJson);
+
+                setTimeout( function () {
+                    $('#default').show().delay(3000).fadeOut();
+                    drawMap(37.774833, -122.418284, foodGeoJson);
+                }, 3000);
+
+                //drawMap(37.774833, -122.418284, foodGeoJson);
 
             } else {
                 var userCoordinates = data.features[0].geometry.coordinates;
@@ -71,7 +78,7 @@ $(document).ready(function() {
 function drawMap(userLat, userLong, points) {
 
     $('#location-input').val('');
-    $('#user-error').empty();
+    $('#user-error').hide();
 
     if (map) { map.remove(); }
 
