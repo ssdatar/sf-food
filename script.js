@@ -29,24 +29,29 @@ $(document).ready(function() {
             size: 1
         })
         .done(function (data) {
+            var foodPts, foodGeoJson;
 
-            //If it is not in SF, don't plot
+            //If it is not in SF, show default
             if (data.features[0].properties.county !== "San Francisco County") {
                 $('#user-error').show().delay(3000).fadeOut();
-                //console.log('Sorry, this location is not in SF');
+
+                foodPts = pointsToPlot(37.774833, -122.418284);
+                foodGeoJson = toGeoJSON(foodPts);
+                drawMap(37.774833, -122.418284, foodGeoJson);
+
             } else {
                 var userCoordinates = data.features[0].geometry.coordinates;
                 var userLat = userCoordinates[1],
                     userLong = userCoordinates[0];
 
-                var foodPts = pointsToPlot(userLat, userLong);
-                console.log(foodPts);
+                foodPts = pointsToPlot(userLat, userLong);
+                //console.log(foodPts);
 
                 var openNum = foodPts.length;
                 //console.log(openNum)
 
                 //Get GeoJSON of all points within one-mile radius
-                var foodGeoJson = toGeoJSON(foodPts);
+                foodGeoJson = toGeoJSON(foodPts);
             
                 var text = openNum + ' food carts/trucks are open around you.';
 
